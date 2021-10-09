@@ -1,0 +1,575 @@
+@import url("https://fonts.googleapis.com/css?family=Muli&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,500&display=swap");
+
+/*------ SCROLL -------*/
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(transparent, #30ff);
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(transparent, #30ff00);
+}
+/*------------------------*/
+
+
+/*---- GENERAL -----*/
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+}
+
+/*-------Inicio Del Header--------*/
+/*----------- Menu----------- */
+.menuNavegacion {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 10%;
+  box-shadow: 0px 5px 4px 3px rgba(0, 0, 0, 0.3);
+  margin-bottom: 10px;
+}
+
+/*-----LOGO TAMAÑO------*/
+
+.Logo {
+  height: 80px;
+}
+
+.Logo img {
+  display: block;
+  height: 100%;
+}
+
+/*-------------*/
+.Enlaces ul {
+  display: flex;
+}
+
+.Enlaces li {
+  margin-right: 1.5rem;
+  padding-top: 15px;
+}
+
+/*-----TAMAÑO , COLOR , TIPO DE LETRA, ETC (LINK)-------*/
+
+.Enlaces a {
+  color: black;
+  padding-left: 20px;
+  font-size: 15px;
+  font-weight: 800;
+  text-transform: uppercase;
+  font-family: "Yomogi";
+  text-decoration: none;
+}
+
+/*------EFECTO AL LINK-------*/
+
+.Enlaces a:hover {
+  color: black;
+  background: transparent;
+  border-radius: 10px;
+  border: 2px solid;
+  padding: 5px 5px;
+}
+
+/*-----ICONO DEL RESPONSIVE------*/
+
+.menuIcono img {
+  width: 30px;
+  height: 30px;
+  border-radius: 2px;
+}
+
+.menuIcono,
+#check {
+  display: none;
+}
+
+/*----------SLIDER DE IMAGENES ESTILOS :)--------------*/
+
+.slider{
+  width: 100%;
+  height: 100%;
+  margin: 5px auto 25px;
+  position: relative;
+  box-shadow: 0px 0px 10px 10px grey;
+  overflow: hidden;
+}
+
+.slider .imagen{
+  margin: 0;
+  position: relative;
+  width: 500%;
+  left: 0px;
+  transition: 1s ease-in-out;
+}
+
+.slider .imagen img{
+  width: 20%;
+  height: 100%;
+  float: left;
+}
+
+.left, .right{
+  position: absolute;
+  top: 40%;
+  cursor: pointer;
+  color: white;
+  background: #3949ab;
+  padding: 5px;
+  font-size: 50px;
+  border: none;
+}
+.left{
+  left: 0px;
+}
+.right{
+  right: 0px;
+}
+
+/*-------Inicio Del Footer--------*/
+
+.footer {
+  width: 100%;
+  padding: 20px 0;
+  background-color: black;
+  color: white;
+  font-family: "FjallaOne";
+}
+
+.footer__contenedor {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.footer__cajas {
+  display: flex;
+  flex-direction: column;
+  padding: 50px;
+  justify-content: space-around;
+  gap: 15px;
+}
+
+.footer__h2 {
+  color: white;
+  font-weight: 700;
+  text-align: center;
+  margin: 0;
+}
+
+.footer__link {
+  color: #f4f4f4;
+  font-weight: 300;
+  text-align: center;
+}
+
+.footer__link:hover {
+  color: yellow;
+}
+
+.footer__link .fab {
+  font-size: 20px;
+  color: white;
+}
+
+.footer__link .far {
+  font-size: 20px;
+  color: white;
+}
+
+.footer__logo {
+  width: 300px;
+}
+
+.footer__texto {
+  max-width: 350px;
+  font-weight: 500;
+  color: #f4f4f4;
+  font-size: 18px;
+}
+
+.footer__Copy {
+  max-width: 1200px;
+  margin: auto;
+  text-align: center;
+  padding: 0 40px;
+  align-content: center;
+  align-items: center;
+}
+
+.footer__p {
+  color: #f4f4f4;
+  margin-top: 20px;
+  text-align: center;
+}
+
+/*------ SLIDER --------*/
+
+@media screen and (max-width: 600px) {
+  .slider .caption .sliderText {
+    display: none;
+  }
+
+  .slider .caption .sliderTitulo {
+    font-size: 35px;
+  }
+
+  .left,
+  .right {
+    font-size: 30px;
+  }
+
+  .slider .sliderli .sliderImagen {
+    width: 600px;
+  }
+}
+
+/*------- STYLES CONTACTO----------*/
+
+.contacto {
+  background-image: url(./img/FondoContacto.jpg);
+  background-size: 1700px;
+  font-family: "Open Sans", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  margin: 0;
+}
+
+.contenedor {
+  background-image: url(./img/Local1.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 700px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  width: 400px;
+  max-width: 100%;
+}
+
+.cabeza {
+  border-bottom: 1px solid #f0f0f0;
+  background-color: #f7f7f7;
+  padding: 20px 40px;
+}
+
+.header h2 {
+  margin: 0;
+}
+
+.form {
+  padding: 30px 40px;
+}
+
+.contenedorForm {
+  margin-bottom: 10px;
+  padding-bottom: 20px;
+  position: relative;
+}
+
+.contenedorForm label {
+  display: inline-block;
+  margin-bottom: 5px;
+  color: #f0f0f0;
+  font-weight: 900;
+}
+
+.contenedorForm input {
+  border: 2px solid #f0f0f0;
+  border-radius: 4px;
+  display: block;
+  font-family: inherit;
+  font-size: 14px;
+  padding: 10px;
+  width: 100%;
+}
+
+.contenedorForm input:focus {
+  outline: 0;
+  border-color: #777;
+}
+
+.contenedorForm.success input {
+  border-color: #2ecc71;
+}
+
+.contenedorForm.error input {
+  border-color: #e74c3c;
+}
+
+.contenedorForm i {
+  visibility: hidden;
+  position: absolute;
+  top: 40px;
+  right: 10px;
+}
+
+.contenedorForm.success i.fa-check-circle {
+  color: #2ecc71;
+  visibility: visible;
+}
+
+.contenedorForm.error i.fa-exclamation-circle {
+  color: #e74c3c;
+  visibility: visible;
+}
+
+.contenedorForm small {
+  color: #e74c3c;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  visibility: hidden;
+}
+
+.contenedorForm.error small {
+  visibility: visible;
+}
+
+.form button {
+  background-color: #8e44ad;
+  border: 2px solid #8e44ad;
+  border-radius: 4px;
+  color: #fff;
+  display: block;
+  font-family: inherit;
+  font-size: 16px;
+  padding: 10px;
+  margin-top: 20px;
+  width: 100%;
+}
+
+
+/*----- PRODUCTOS STYLES ---------*/
+img {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+#categoria {
+  margin: 10px 0px 0px 80%;
+  border-radius: 5px;
+  border: 2px solid black;
+  font-size: 17px;
+  font-family: "Times New Roman", Times, serif;
+  font-weight: 800;
+}
+
+#botonCarrito {
+  border: none;
+  color: black;
+  font-size: 30px;
+  background-color: white;
+  border-radius: 30%;
+  padding: 10px 20px;
+  transition: all 0.3s;
+}
+
+#botonCarrito:hover {
+  cursor: pointer;
+  color: white;
+  background-color: black;
+}
+
+#botonCarrito:focus {
+  outline: none;
+}
+
+#contenedorProductos {
+  max-width: 1200px;
+  margin: 20px auto;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+p {
+  line-height: 1.8;
+}
+
+.producto {
+  max-width: 30%;
+  padding: 10px;
+  margin-bottom: 20px;
+  box-shadow: 2px 6px 3px 3px rgba(0, 0, 0, 0.3);
+}
+
+.precioProducto {
+  font-weight: 700;
+}
+
+.boton-agregar {
+  background-color: royalblue;
+  color: white;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 5px;
+  border-radius: 10px;
+}
+
+.boton-agregar:hover {
+  cursor: pointer;
+}
+
+.boton-agregar:focus {
+  outline: none;
+}
+
+.modalContenedor {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.5s;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.modalActive {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modalCarrito {
+  position: relative;
+  background-color: white;
+  min-width: 500px;
+  padding: 20px;
+  margin-top: -100%;
+  transition: all 0.5s;
+}
+
+.modalActive .modalCarrito {
+  margin-top: 0;
+}
+
+.modalCarrito h3 {
+  color: royalblue;
+  padding-bottom: 5px;
+  font-size: 25px;
+  font-weight: 900;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  text-align: center;
+}
+
+.modalCarrito #carritoCerrar {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  font-size: 20px;
+  color: royalblue;
+  border: none;
+  background-color: white;
+}
+
+.modalCarrito #carritoCerrar:hover {
+  cursor: pointer;
+}
+
+.modalCarrito #carritoCerrar:focus {
+  outline: none;
+}
+
+.modalCarrito .precioProducto {
+  padding-top: 10px;
+}
+
+.productoEnCarrito {
+  border-left: 5px solid lightblue;
+  border-bottom-left-radius: 3px;
+  border-top-left-radius: 3px;
+  margin: 5px 0;
+  padding: 5px 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.productoEnCarrito:hover {
+  border-left: 5px solid royalblue;
+}
+
+.botonEliminar {
+  background-color: white;
+  color: red;
+  border: none;
+  font-size: 20px;
+}
+
+.botonEliminar:hover {
+  cursor: pointer;
+}
+
+.botonEliminar:focus {
+  outline: none;
+}
+
+
+
+/*------- Sucursales --------*/
+/*------- Primera parte --------*/
+.grid {
+  margin: 80px;
+  padding-left: 90px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 30px;
+  align-items: center;
+}
+
+.sucursal {
+  background:white;
+  border: none;
+  box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.3);
+  border-radius: 20px;
+  text-align: center;
+  width: 250px;
+  transition: transform 0.3s;
+}
+.sucursal:hover {
+  transform: translateY(5px);
+  box-shadow: 2px 2px 26px 0px rgba(0, 0, 0, 0.3);
+}
+.sucursal .imagenSucursal {
+  width: 100%;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+.sucursal .text {
+  padding: 0px 20px;
+}
+.sucursal .text h3 {
+  text-transform: uppercase;
+}
+.sucursal .text button {
+  background: #ef6f6c;
+  border-radius: 20px;
+  border: none;
+  color: #fff;
+  padding: 10px;
+  margin: 10px 0 20px 0;
+  width: 100%;
+  font-weight: 600;
+  text-transform: uppercase;
+  cursor: pointer;
+}

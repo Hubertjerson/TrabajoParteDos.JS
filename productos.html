@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/fcf8213e0b.js" crossorigin="anonymous"></script>
+    <script defer src="stock.productos.js"></script>
+    <script defer src="modal.carrito.js"></script>
+    <script defer src="main.productos.js"></script>
+    <title>productos</title>
+</head>
+
+<body>
+    <header>
+        <nav class="menuNavegacion">
+            <div class="Logo">
+                <a href="Index.Html">
+                    <img src="imagenes/LogoGrande.jpg" alt="logo" />
+                </a>
+            </div>
+            <div class="Enlaces">
+                <input type="checkbox" id="check">
+                <label for="check" class="checkbtn">
+                    <i class="menuIcono"><img src="img/menuIconoB.png" alt="MenuBoton"></i>
+                </label>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="productos.html"" >Carta</a></li>
+                    <li><a href="sucursales.html">Sucursales</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                    <button id="botonCarrito"><i class="fas fa-shopping-cart"></i><span id="contadorCarrito">0</span></button>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <!-- SELECCIONAR POR CATEGORIA DE PRODUCTOS -->
+    <select id="categoria">
+        <option value="all">Todos</option>
+        <option value="promocion">Promociones</option>
+        <option value="avocado">Avocado</option>
+        <option value="sake">Sake</option>
+    </select>
+
+    <!-- PRODUCTOS EN HTML -->
+    <main id="contenedorProductos">
+
+    </main>
+
+    <!-- MODAL DEL CARRITO -->
+    <div class="modalContenedor">
+        <div class="modalCarrito">
+            <h3>Carrito</h3>
+            <button id="carritoCerrar"><i class="fas fa-times-circle"></i></button>
+            <div id="carritoContenedor">
+            </div>
+            <p class="precioProducto">precio total:$<span id="precioTotal"></span></p>
+        </div>
+    </div>
+    <!----- PAGINACION ------>
+    <main>
+		<div class="list" id="list"></div>
+		<div class="pagenumbers" id="pagination"></div>
+	</main>
+    <!-----Inicio del Footer----->
+    <footer class="footer">
+        <div class="footer__contenedor">
+            <div class="footer__cajas">
+                <div>
+                    <img class="footer__logo" src="../img/Logo/Logo.jpg" alt="logoFooter">
+                </div>
+                <div class="footer__texto">
+                    <p> Disfruta de una excelente variedad de sushis con una combinacion de las mejores gastronomias (
+                        PERUANA JAPONES)</p>
+                </div>
+            </div>
+            <div class="footer__cajas">
+                <h2 class="footer__h2">Redes sociales</h2>
+                <a class="footer__link" href="">Carta</a>
+                <a class="footer__link" href="">Promociones</a>
+                <a class="footer__link" href="">Contacto</a>
+            </div>
+            <div class="footer__cajas">
+                <h2 class="footer__h2">Contacto</h2>
+                <a class="footer__link" href=""><i class="fab fa-facebook-f"></i> facebook</a>
+                <a class="footer__link" href=""><i class="fab fa-instagram"></i> instagram</a>
+                <a class="footer__link" href=""><i class="far fa-envelope"></i> correo</a>
+            </div>
+        </div>
+        <div class="footer__copy">
+            <hr>
+            <p class="footer__p">Todos los derechos reservado ©2021</p>
+            <p class="footer__p">Jerson Huaman</p>
+        </div>
+    </footer>
+</body>
+
+</html>
